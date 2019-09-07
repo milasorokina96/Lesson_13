@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>iPhone switch</title>
+		<style type="text/css">
+			.switch {
+				margin-top: 200px; 
+				text-align: center;
+			}
+			.switch__checkbox {
+				display: none;
+			}
+			.switch__label {
+				display: inline-block;
+				width: 90px;
+				height: 50px;
+				background-color: rgb(110, 220, 95);
+				border-radius: 50px;
+				cursor: pointer;
+				position: relative;
+			}
+			.switch__label::before {
+				content: '';
+				width: 46px;
+				height: 46px;
+				background-color: rgb(255, 255, 255);
+				border-radius: 50%;
+				position: absolute;
+				top: 2px;
+				right: 2px;
+			}
+			.switch__checkbox:checked + .switch__label {
+				background-color: rgb(221, 221, 221);
+			}
+			.switch__checkbox:checked + .switch__label::before {
+				left: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="switch">
+			<p class="switch__text">Switch me</p>
+			<input type="checkbox" name="switch" id="switch" class="switch__checkbox">
+			<label for="switch" class="switch__label"></label>
+		</section>
+	</body>
+</html>

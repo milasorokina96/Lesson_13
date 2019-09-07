@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Menu</title>
+		<style type="text/css">
+		.topmenu,
+		.submenu,
+		.subsubmenu {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.topmenu__iteam {
+			display: inline-block;
+			margin-right: 5px;
+			position: relative;  
+		}
+		.topmenu__iteam:last-child {
+			margin-right: 0;
+		}
+		.topmenu__link {
+			display: block;
+			text-decoration: none;
+			width: 170px;
+			text-align: center;
+			padding-top: 7px;
+    		padding-bottom: 7px;
+			border: 1px solid rgb(204, 204, 204);
+			color: rgb(0, 0, 0);
+		}
+		.submenu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			border-top: 1px solid rgb(204, 204, 204);
+			text-align: center;
+		}
+		.topmenu__iteam:hover > .submenu {
+			display: inherit;
+		}
+		.submenu__link {
+			display: block;
+			text-decoration: none;
+			color: rgb(0, 0, 0);  
+			padding-top: 7px;
+    		padding-bottom: 7px;
+    		border-right: 1px solid rgb(204, 204, 204);
+			border-bottom: 1px solid rgb(204, 204, 204);
+			border-left: 1px solid rgb(204, 204, 204);
+		}
+		.submenu__link:hover {
+			background-color: rgb(0, 0, 255);
+			color: rgb(255, 255, 255);
+		}
+		.submenu__iteam {
+			position: relative;
+		}
+		.subsubmenu {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			border-top: 1px solid rgb(204, 204, 204);
+		}
+		.submenu__iteam:hover > .subsubmenu {
+			display: inherit;
+		}
+		.subsubmenu__link {
+			display: block;
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			padding-top: 7px;
+    		padding-bottom: 7px;
+    		border-right: 1px solid rgb(204, 204, 204);
+			border-bottom: 1px solid rgb(204, 204, 204);
+			border-left: 1px solid rgb(204, 204, 204);
+		}
+
+		</style>
+	</head>
+	<body>
+		<nav class="page-nav">
+			<ul class="topmenu">
+				<li class="topmenu__iteam">
+					<a href="#" class="topmenu__link">link 1</a>
+				</li>
+				<li class="topmenu__iteam">
+					<a href="#" class="topmenu__link">link 2</a>
+					<ul class="submenu">
+						<li class="submenu__iteam">
+							<a href="#" class="submenu__link">link 2.1</a>
+						</li>
+						<li class="submenu__iteam">
+							<a href="#" class="submenu__link">link 2.2</a>
+							<ul class="subsubmenu">
+								<li class="subsubmenu__iteam">
+									<a href="#" class="subsubmenu__link">link 2.2.1</a>
+								</li>
+								<li class="subsubmenu__iteam">
+									<a href="#" class="subsubmenu__link">link 2.2.2</a>
+								</li>
+								<li class="subsubmenu__iteam">
+									<a href="#" class="subsubmenu__link">link 2.2.3</a>
+								</li>
+							</ul>
+						</li>
+						<li class="submenu__iteam">
+							<a href="#" class="submenu__link">link 2.3</a>
+						</li>
+					</ul>
+				</li>
+				<li class="topmenu__iteam">
+					<a href="#" class="topmenu__link">link 3</a>
+				</li>
+			</ul>	
+		</nav>
+	</body>
+</html>
